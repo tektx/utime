@@ -44,3 +44,15 @@ function timeToStr( time )
 
 	return string.format( "%02iw %id %02ih %02im %02is", w, d, h, m, s )
 end
+
+function GetCreditsString( num )
+    return string.format("%02i", num)
+end
+
+function meta:UTGetCreditsEarned()
+	return self:GetNWInt( "CreditsEarned" )
+end
+
+function meta:UTGetCreditsLeft()
+	return self:GetNWInt( "CreditsLeft" )
+end

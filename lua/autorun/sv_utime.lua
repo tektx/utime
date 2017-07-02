@@ -22,7 +22,7 @@ function onJoin( ply )
 		time = row.totaltime
 	else
 		if utime_welcome:GetBool() then
-			ULib.tsay( ply, "[UTime]Welcome to our server " .. ply:Nick() .. "!" )
+			ULib.tsay( ply, "[UTime]Welcome to Pantheon, " .. ply:Nick() .. "!" )
 		end
 		sql.Query( "INSERT into utime ( player, totaltime, lastvisit ) VALUES ( " .. uid .. ", 0, " .. os.time() .. " );" )
 	end
