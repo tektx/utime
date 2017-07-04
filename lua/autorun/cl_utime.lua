@@ -57,21 +57,21 @@ function think()
 	gpanel.lblSessionTime:SetTextColor( textColor )
 	gpanel.total:SetTextColor( textColor )
 	gpanel.session:SetTextColor( textColor )
-    
-    	gpanel.lblCreditsEarned:SetTextColor( textColor )
-	gpanel.lblCreditsLeft:SetTextColor( textColor )	
+
+	gpanel.lblCreditsEarned:SetTextColor( textColor )
+	gpanel.lblCreditsLeft:SetTextColor( textColor )
 	gpanel.earned:SetTextColor( textColor )
 	gpanel.left:SetTextColor( textColor )
-	
-	local insideTextColor = Color( utime_insidetext_r:GetInt(), utime_insidetext_g:GetInt(), utime_insidetext_b:GetInt(), 255 )	
+
+	local insideTextColor = Color( utime_insidetext_r:GetInt(), utime_insidetext_g:GetInt(), utime_insidetext_b:GetInt(), 255 )
 	gpanel.playerInfo.lblTotalTime:SetTextColor( insideTextColor )
 	gpanel.playerInfo.lblSessionTime:SetTextColor( insideTextColor )
-    	gpanel.playerInfo.lblCreditsEarned:SetTextColor( insideTextColor )
+	gpanel.playerInfo.lblCreditsEarned:SetTextColor( insideTextColor )
 	gpanel.playerInfo.lblCreditsLeft:SetTextColor( insideTextColor )
 	gpanel.playerInfo.lblNick:SetTextColor( insideTextColor )
 	gpanel.playerInfo.total:SetTextColor( insideTextColor )
 	gpanel.playerInfo.session:SetTextColor( insideTextColor )
-    	gpanel.playerInfo.earned:SetTextColor( insideTextColor )
+  gpanel.playerInfo.earned:SetTextColor( insideTextColor )
 	gpanel.playerInfo.left:SetTextColor( insideTextColor )
 	gpanel.playerInfo.nick:SetTextColor( insideTextColor )
 end
@@ -123,10 +123,10 @@ function PANEL:Init()
 
 		self.total			= vgui.Create( "DLabel", self )
 		self.session			= vgui.Create( "DLabel", self )
-    
-    		self.lblCreditsEarned		= vgui.Create( "DLabel", self )
+
+		self.lblCreditsEarned		= vgui.Create( "DLabel", self )
 		self.lblCreditsLeft		= vgui.Create( "DLabel", self )
-	
+
 		self.earned			= vgui.Create( "DLabel", self )
 		self.left			= vgui.Create( "DLabel", self )
 end
@@ -145,11 +145,11 @@ function PANEL:ApplySchemeSettings()
 		self.total:SetTextColor( color_black )
 		self.session:SetTextColor( color_black )
 
-	    	self.lblCreditsEarned:SetFont( "DermaDefault" )
+		self.lblCreditsEarned:SetFont( "DermaDefault" )
 		self.lblCreditsLeft:SetFont( "DermaDefault" )
 		self.earned:SetFont( "DermaDefault" )
-		self.left:SetFont( "DermaDefault" )	
-	
+		self.left:SetFont( "DermaDefault" )
+
 		self.lblCreditsEarned:SetTextColor( color_black )
 		self.lblCreditsLeft:SetTextColor( color_black )
 		self.earned:SetTextColor( color_black )
@@ -204,8 +204,8 @@ function PANEL:Think()
 
 	self.total:SetText( timeToStr( LocalPlayer():GetUTimeTotalTime() ) )
 	self.session:SetText( timeToStr( LocalPlayer():GetUTimeSessionTime() ) )
-    
-    	self.earned:SetText( tostring( LocalPlayer():UTGetCreditsEarned() ) )
+
+	self.earned:SetText( tostring( LocalPlayer():UTGetCreditsEarned() ) )
 	self.left:SetText( tostring( LocalPlayer():UTGetCreditsLeft() ) )
 end
 
@@ -222,24 +222,24 @@ function PANEL:PerformLayout()
 	self.lblSessionTime:SetSize( 52, 18 )
 	self.lblSessionTime:SetPos( 8, 20 )
 	self.lblSessionTime:SetText( "Session: " )
-    
-    	self.lblCreditsEarned:SetSize( 100, 18 )
+
+	self.lblCreditsEarned:SetSize( 100, 18 )
 	self.lblCreditsEarned:SetPos( 8, 38 )
-	self.lblCreditsEarned:SetText( "Total Credits: " )	
-	
+	self.lblCreditsEarned:SetText( "Total Credits: " )
+
 	self.lblCreditsLeft:SetSize( 100, 18 )
 	self.lblCreditsLeft:SetPos( 8, 56 )
 	self.lblCreditsLeft:SetText( "Unspent Credits: " )
-	
+
 	self.total:SetSize( self:GetWide() - 52, 18 )
 	self.total:SetPos( 52, 2 )
 
 	self.session:SetSize( self:GetWide() - 52, 18 )
 	self.session:SetPos( 52, 20 )
-    
-    	self.earned:SetSize( self:GetWide() - 52, 18 )
+
+	self.earned:SetSize( self:GetWide() - 52, 18 )
 	self.earned:SetPos( 100, 38 )
-	
+
 	self.left:SetSize( self:GetWide() - 52, 18 )
 	self.left:SetPos( 100, 56 )	
 
@@ -257,13 +257,13 @@ local INFOPANEL = {}
 function INFOPANEL:Init()
 	self.lblTotalTime		= vgui.Create( "DLabel", self )
 	self.lblSessionTime		= vgui.Create( "DLabel", self )
-    	self.lblCreditsEarned		= vgui.Create( "DLabel", self )
+	self.lblCreditsEarned		= vgui.Create( "DLabel", self )
 	self.lblCreditsLeft		= vgui.Create( "DLabel", self )
 	self.lblNick			= vgui.Create( "DLabel", self )
 
 	self.total			= vgui.Create( "DLabel", self )
 	self.session			= vgui.Create( "DLabel", self )
-    	self.earned			= vgui.Create( "DLabel", self )
+	self.earned			= vgui.Create( "DLabel", self )
 	self.left			= vgui.Create( "DLabel", self )
 	self.nick			= vgui.Create( "DLabel", self )
 end
@@ -281,24 +281,24 @@ end
 function INFOPANEL:ApplySchemeSettings()
 		self.lblTotalTime:SetFont( "DermaDefault" )
 		self.lblSessionTime:SetFont( "DermaDefault" )
-    		self.lblCreditsEarned:SetFont( "DermaDefault" )
+		self.lblCreditsEarned:SetFont( "DermaDefault" )
 		self.lblCreditsLeft:SetFont( "DermaDefault" )
 		self.lblNick:SetFont( "DermaDefault" )
 		self.total:SetFont( "DermaDefault" )
 		self.session:SetFont( "DermaDefault" )
-    		self.earned:SetFont( "DermaDefault" )
+		self.earned:SetFont( "DermaDefault" )
 		self.left:SetFont( "DermaDefault" )
 		self.nick:SetFont( "DermaDefault" )
 
 		self.lblTotalTime:SetTextColor( color_black )
 		self.lblSessionTime:SetTextColor( color_black )
-    		self.lblCreditsEarned:SetTextColor( color_black )
+		self.lblCreditsEarned:SetTextColor( color_black )
 		self.lblCreditsLeft:SetTextColor( color_black )
 		self.lblNick:SetTextColor( color_black )
 		self.total:SetTextColor( color_black )
 		self.session:SetTextColor( color_black )
-    		self.earned:SetTextColor( color_black )
-		self.left:SetTextColor( color_black )	
+		self.earned:SetTextColor( color_black )
+		self.left:SetTextColor( color_black )
 		self.nick:SetTextColor( color_black )
 end
 
@@ -314,7 +314,7 @@ function INFOPANEL:Think()
 
 		self.total:SetText( timeToStr( ply:GetUTime() + CurTime() - ply:GetUTimeStart() ) )
 		self.session:SetText( timeToStr( CurTime() - ply:GetUTimeStart() ) )
-    		self.earned:SetText( GetCreditsString( ply:UTGetCreditsEarned() ) )
+		self.earned:SetText( GetCreditsString( ply:UTGetCreditsEarned() ) )
 		self.left:SetText( GetCreditsString( ply:UTGetCreditsLeft() ) )
 		self.nick:SetText( ply:Nick() )
 end
@@ -334,15 +334,15 @@ function INFOPANEL:PerformLayout()
 		self.lblSessionTime:SetSize( 52, 18 )
 		self.lblSessionTime:SetPos( 8, 36 )
 		self.lblSessionTime:SetText( "Session: " )
-    
-    		self.lblCreditsEarned:SetSize( 100, 18 )
+
+		self.lblCreditsEarned:SetSize( 100, 18 )
 		self.lblCreditsEarned:SetPos( 8, 54 )
-		self.lblCreditsEarned:SetText( "Credits Earned: " )	
-	
+		self.lblCreditsEarned:SetText( "Credits Earned: " )
+
 		self.lblCreditsLeft:SetSize( 100, 18 )
 		self.lblCreditsLeft:SetPos( 8, 72 )
 		self.lblCreditsLeft:SetText( "Credits Left: " )
-	
+
 		self.nick:SetSize( self:GetWide() - 52, 18 )
 		self.nick:SetPos( 52, 0 )
 
@@ -351,10 +351,10 @@ function INFOPANEL:PerformLayout()
 
 		self.session:SetSize( self:GetWide() - 52, 18 )
 		self.session:SetPos( 52, 36 )
-    
-    		self.earned:SetSize( self:GetWide() - 52, 18 )
+
+		self.earned:SetSize( self:GetWide() - 52, 18 )
 		self.earned:SetPos( 100, 54 )
-	
+
 		self.left:SetSize( self:GetWide() - 52, 18 )
 		self.left:SetPos( 100, 72 )
 end
